@@ -8,16 +8,21 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome",
-            "url": "http://localhost:4200",
+            "url": "http://localhost:4200/",
+            // "port": 9222,
             "sourceMaps": true,
-            "webRoot": "${workspaceRoot}"
+            "trace": true,
+            "webRoot": "${workspaceRoot}/wwwroot"
         },
         {
             "type": "chrome",
             "request": "attach",
+            "sourceMaps": true,
+            "trace": true,
+            "url": "http://localhost:4200/",
             "name": "Attach to Chrome",
             "port": 9222,
-            "webRoot": "${workspaceRoot}"
+            "webRoot": "${workspaceRoot}/wwwroot"
         }
     ]
 }
