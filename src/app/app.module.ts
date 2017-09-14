@@ -1,7 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,  } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 import { NavModule } from './nav/nav.module';
+import { HomeModule } from './home/home.module';
+import { SettingsModule } from './settings/settings.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -10,8 +14,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    NavModule.forRoot()
+    HomeModule,
+    SettingsModule,
+    NavModule,
+    RouterModule.forRoot([])
   ],
+  // exports: [
+  //   RouterModule
+  // ],
   providers: [],
   bootstrap: [AppComponent]
 })
